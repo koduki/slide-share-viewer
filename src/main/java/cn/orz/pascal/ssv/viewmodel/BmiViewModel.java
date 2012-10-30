@@ -1,11 +1,12 @@
-package cn.orz.pascal.android_example.viewmodel;
+package cn.orz.pascal.ssv.viewmodel;
 
 import android.util.Log;
-import cn.orz.pascal.android_example.config.Config;
-import cn.orz.pascal.android_example.config.Environment;
-import cn.orz.pascal.android_example.injector.TwitterInjector;
-import cn.orz.pascal.android_example.model.BMI;
-import cn.orz.pascal.android_example.model.BMISocialService;
+import cn.orz.pascal.ssv.config.Config;
+import cn.orz.pascal.ssv.config.Environment;
+import cn.orz.pascal.ssv.injector.TwitterInjector;
+import cn.orz.pascal.ssv.model.BMI;
+import cn.orz.pascal.ssv.model.BMISocialService;
+
 import com.google.inject.AbstractModule;
 import com.google.inject.Guice;
 import com.google.inject.Injector;

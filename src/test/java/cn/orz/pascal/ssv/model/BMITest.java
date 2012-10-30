@@ -1,5 +1,6 @@
-package cn.orz.pascal.android_example.model;
+package cn.orz.pascal.ssv.model;
 
+import cn.orz.pascal.ssv.model.BMI;
 import junit.framework.TestCase;
 
 public class BMITest extends TestCase {

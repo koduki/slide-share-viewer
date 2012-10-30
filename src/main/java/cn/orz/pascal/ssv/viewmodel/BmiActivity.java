@@ -1,6 +1,6 @@
-package cn.orz.pascal.android_example.viewmodel;
+package cn.orz.pascal.ssv.viewmodel;
 
-import cn.orz.pascal.android_example.R;
+import cn.orz.pascal.ssv.R;
 import gueei.binding.app.BindingActivity;
 import android.os.Bundle;
 

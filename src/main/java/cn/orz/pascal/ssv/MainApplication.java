@@ -1,4 +1,4 @@
-package cn.orz.pascal.android_example;
+package cn.orz.pascal.ssv;
 
 import gueei.binding.Binder;
 import android.app.Application;

@@ -3,10 +3,10 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>cn.orz.pascal</groupId>
-    <artifactId>android_sample</artifactId>
+    <artifactId>ssv</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>apk</packaging>
-    <name>Android-Sample</name>
+    <name>ssv</name>
     <properties>
         <environment>development</environment>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

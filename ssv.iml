@@ -15,7 +15,7 @@
         <option name="CUSTOM_APK_RESOURCE_FOLDER" value="/target/generated-sources/combined-resources/res" />
         <option name="USE_CUSTOM_COMPILER_MANIFEST" value="false" />
         <option name="CUSTOM_COMPILER_MANIFEST" value="" />
-        <option name="APK_PATH" value="/target/android_sample.apk" />
+        <option name="APK_PATH" value="/target/ssv.apk" />
         <option name="LIBRARY_PROJECT" value="false" />
         <option name="RUN_PROCESS_RESOURCES_MAVEN_TASK" value="false" />
         <option name="GENERATE_UNSIGNED_APK" value="false" />
@@ -27,6 +27,7 @@
           <path>/res-overlay</path>
         </resOverlayFolders>
         <includeSystemProguardFile>true</includeSystemProguardFile>
+        <includeAssetsFromLibraries>true</includeAssetsFromLibraries>
         <additionalNativeLibs />
       </configuration>
     </facet>
@@ -68,7 +69,7 @@
     <orderEntry type="library" name="Maven: aopalliance:aopalliance:1.0" level="project" />
     <orderEntry type="library" name="Maven: gueei:android-binding:v30-0.52" level="project" />
     <orderEntry type="library" name="Maven: org.twitter4j:twitter4j-core:3.0.0-SNAPSHOT" level="project" />
-    <orderEntry type="inheritedJdk" />
+    <orderEntry type="jdk" jdkName="Android 2.3.3 Google APIs" jdkType="Android SDK" />
   </component>
 </module>
 

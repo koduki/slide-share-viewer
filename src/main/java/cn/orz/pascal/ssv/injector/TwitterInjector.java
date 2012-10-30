@@ -1,8 +1,9 @@
-package cn.orz.pascal.android_example.injector;
+package cn.orz.pascal.ssv.injector;
 
 import android.util.Log;
-import cn.orz.pascal.android_example.config.Config;
-import cn.orz.pascal.android_example.config.Environment.Profile;
+import cn.orz.pascal.ssv.config.Config;
+import cn.orz.pascal.ssv.config.Environment.Profile;
+
 import com.google.inject.AbstractModule;
 import twitter4j.Status;
 import twitter4j.TwitterFactory;

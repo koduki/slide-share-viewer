@@ -1,4 +1,4 @@
-package cn.orz.pascal.android_example.model;
+package cn.orz.pascal.ssv.model;
 
 import com.google.inject.Inject;
 import twitter4j.Status;

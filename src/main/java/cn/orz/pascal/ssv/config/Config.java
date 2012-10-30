@@ -1,4 +1,4 @@
-package cn.orz.pascal.android_example.config;
+package cn.orz.pascal.ssv.config;
 
 /**
  * Config Class.
