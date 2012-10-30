@@ -64,6 +64,12 @@
             <artifactId>twitter4j-core</artifactId>
             <version>[2.2,)</version>
         </dependency>
+        <dependency>
+            <groupId>org.ccil.cowan.tagsoup</groupId>
+            <artifactId>tagsoup</artifactId>
+            <version>1.2.1</version>
+        </dependency>
+
     </dependencies>
     <build>
         <finalName>${project.artifactId}</finalName>
