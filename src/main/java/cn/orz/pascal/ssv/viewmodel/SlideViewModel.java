@@ -1,28 +1,41 @@
 package cn.orz.pascal.ssv.viewmodel;
 
 import android.util.Log;
+import android.widget.ImageView;
+import cn.orz.pascal.ssv.R;
+import cn.orz.pascal.ssv.commons.AndroidUtils;
 import cn.orz.pascal.ssv.config.Config;
 import cn.orz.pascal.ssv.config.Environment;
 import cn.orz.pascal.ssv.injector.TwitterInjector;
 import cn.orz.pascal.ssv.model.BMI;
 import cn.orz.pascal.ssv.model.BMISocialService;
 
+import cn.orz.pascal.ssv.model.RemoteSlide;
 import com.google.inject.AbstractModule;
 import com.google.inject.Guice;
 import com.google.inject.Injector;
 import gueei.binding.Command;
+import gueei.binding.bindingProviders.ImageViewProvider;
 import gueei.binding.observables.DoubleObservable;
+import gueei.binding.observables.ObjectObservable;
 import gueei.binding.observables.StringObservable;
 import android.view.View;
 import twitter4j.TwitterFactory;
 import twitter4j.conf.ConfigurationBuilder;
+
+import java.io.IOException;
+import java.net.URL;
 
 /**
  * BMI Activity View Model.
  *
  * @author koduki
  */
-public class BmiViewModel {
+public class SlideViewModel {
+    /**
+     *
+     */
+    public final ObjectObservable slideImage = new ObjectObservable();
     /**
      * body height.
      */
@@ -36,26 +49,26 @@ public class BmiViewModel {
      */
     public final StringObservable bmi = new StringObservable("0");
 
+
     /**
      * calculate BMI.
      */
-    public final Command calculate = new Command() {
-        @Override
-        public void Invoke(View arg0, Object... arg1) {
-            double result = BMI.calc(Double.parseDouble(weight.get()), Double.parseDouble(height.get()));
-            bmi.set(String.format("%.1f", result));
-        }
-    };
+    public final Command next = new Command() {
+        private int currentIndex = 1;
 
-    /**
-     * post twitter.
-     */
-    public final Command tweet = new Command() {
         @Override
         public void Invoke(View arg0, Object... arg1) {
-            BMISocialService bmiSocialService = createBmiSocialService();
-            Log.d("tweet bmi:", bmi.get());
-            bmiSocialService.tweet(Double.parseDouble(bmi.get()));
+            //画像をリソースを設定
+            try{
+                this.currentIndex += 1;
+                Log.i("debug", "onNext " + this.currentIndex);
+
+                String url = new RemoteSlide().getUrls(new URL("http://www.slideshare.net/koduki/tokyu-ruby05")).get(this.currentIndex);
+
+                slideImage.set(AndroidUtils.getBitmap(url));
+            }catch (Exception e){
+                e.printStackTrace();
+            }
         }
     };
 
