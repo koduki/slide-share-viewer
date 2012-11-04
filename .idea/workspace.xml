@@ -13,22 +13,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0e69fcaf-eba5-4f75-b335-40873fc1040b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_android_support_v4_r6.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_pivotallabs_robolectric_1_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_10.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_javassist_javassist_3_14_0_GA.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_objenesis_objenesis_1_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_xerial_sqlite_jdbc_3_7_2.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_3_8_2.xml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/cn/orz/pascal/ssv/commons/AndroidLogSource.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/cn/orz/pascal/ssv/commons/LogSource.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/cn/orz/pascal/ssv/commons/Logger.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/cn/orz/pascal/ssv/commons/StandardLogSource.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/main.xml" afterPath="$PROJECT_DIR$/res/layout/main.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/cn/orz/pascal/ssv/model/RemoteSlide.java" afterPath="$PROJECT_DIR$/src/main/java/cn/orz/pascal/ssv/model/RemoteSlide.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/cn/orz/pascal/ssv/viewmodel/SlideActivity.java" afterPath="$PROJECT_DIR$/src/main/java/cn/orz/pascal/ssv/viewmodel/SlideActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/cn/orz/pascal/ssv/viewmodel/SlideViewModel.java" afterPath="$PROJECT_DIR$/src/main/java/cn/orz/pascal/ssv/viewmodel/SlideViewModel.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/cn/orz/pascal/ssv/model/RemoteSlideTest.java" afterPath="$PROJECT_DIR$/src/test/java/cn/orz/pascal/ssv/model/RemoteSlideTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ssv.iml" afterPath="$PROJECT_DIR$/ssv.iml" />
     </list>
     <ignored path="ssv.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -86,29 +79,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="main.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/layout/main.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="30" selection-start="892" selection-end="892" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="SlideActivity.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/cn/orz/pascal/ssv/viewmodel/SlideActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="20" selection-start="396" selection-end="396" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BMISocialService.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cn/orz/pascal/ssv/model/BMISocialService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="37" selection-start="330" selection-end="330" vertical-scroll-proportion="0.0">
-              <folding />
+            <state line="32" column="43" selection-start="940" selection-end="940" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#1017#1192#0" expanded="true" />
+                <element signature="e#1181#1182#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -116,12 +94,36 @@
       <file leaf-file-name="SlideViewModel.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/cn/orz/pascal/ssv/viewmodel/SlideViewModel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="48" selection-start="280" selection-end="280" vertical-scroll-proportion="0.0">
+            <state line="67" column="7" selection-start="1979" selection-end="1979" vertical-scroll-proportion="0.0">
               <folding>
-                <element signature="e#2065#2646#0" expanded="true" />
-                <element signature="e#2639#2640#0" expanded="true" />
-                <element signature="e#2681#3231#0" expanded="true" />
-                <element signature="e#3224#3225#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#1354#1935#0" expanded="true" />
+                <element signature="e#1928#1929#0" expanded="true" />
+                <element signature="e#2012#2562#0" expanded="true" />
+                <element signature="e#2555#2556#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RemoteSlideTest.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/cn/orz/pascal/ssv/model/RemoteSlideTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="8" column="24" selection-start="319" selection-end="319" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#712#888#0" expanded="true" />
+                <element signature="e#877#878#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="StandardLogSource.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cn/orz/pascal/ssv/commons/StandardLogSource.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="1" column="0" selection-start="35" selection-end="35" vertical-scroll-proportion="0.027372263">
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -130,27 +132,7 @@
       <file leaf-file-name="XmlUtil.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/cn/orz/pascal/ssv/commons/XmlUtil.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="33" selection-start="791" selection-end="799" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pom.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="48" column="35" selection-start="1808" selection-end="1819" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RemoteSlideTest.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/java/cn/orz/pascal/ssv/model/RemoteSlideTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="30" selection-start="331" selection-end="352" vertical-scroll-proportion="0.3954306">
+            <state line="31" column="0" selection-start="1096" selection-end="1096" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -161,20 +143,52 @@
       <file leaf-file-name="RemoteSlide.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/cn/orz/pascal/ssv/model/RemoteSlide.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="61" column="0" selection-start="2018" selection-end="2018" vertical-scroll-proportion="0.0">
+            <state line="84" column="28" selection-start="2845" selection-end="2845" vertical-scroll-proportion="0.0">
               <folding>
-                <element signature="e#986#994#0" expanded="true" />
-                <element signature="e#1824#1832#0" expanded="true" />
+                <element signature="e#993#1001#0" expanded="true" />
+                <element signature="e#1801#1809#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AndroidManifest.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
+      <file leaf-file-name="Logger.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cn/orz/pascal/ssv/commons/Logger.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="34" column="7" selection-start="966" selection-end="966" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#367#381#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LogSource.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cn/orz/pascal/ssv/commons/LogSource.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="16" column="0" selection-start="348" selection-end="348" vertical-scroll-proportion="0.0">
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AndroidLogSource.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cn/orz/pascal/ssv/commons/AndroidLogSource.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="22" column="5" selection-start="513" selection-end="513" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AndroidUtils.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cn/orz/pascal/ssv/commons/AndroidUtils.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="15" column="13" selection-start="323" selection-end="323" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -192,18 +206,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/res/values/strings.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/orz/pascal/ssv/RemoteSlide.java" />
         <option value="$PROJECT_DIR$/src/test/java/cn/orz/pascal/ssv/model/SlideDownloaderTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/cn/orz/pascal/ssv/XmlUtil.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/orz/pascal/ssv/commons/AndroidUtils.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/orz/pascal/ssv/viewmodel/BmiActivity.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/orz/pascal/ssv/viewmodel/BmiViewModel.java" />
         <option value="$PROJECT_DIR$/res/layout/main.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/orz/pascal/ssv/viewmodel/SlideViewModel.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/test/java/cn/orz/pascal/ssv/model/RemoteSlideTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/orz/pascal/ssv/model/RemoteSlide.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/orz/pascal/ssv/viewmodel/SlideViewModel.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/orz/pascal/ssv/commons/LoggerSource.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/orz/pascal/ssv/viewmodel/SlideActivity.java" />
+        <option value="$PROJECT_DIR$/src/test/java/cn/orz/pascal/ssv/model/RemoteSlideTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/orz/pascal/ssv/commons/StandardLogSource.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/orz/pascal/ssv/commons/AndroidLogSource.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/orz/pascal/ssv/commons/Logger.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/orz/pascal/ssv/commons/LogSource.java" />
       </list>
     </option>
   </component>
@@ -445,6 +463,36 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="injector" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ssv" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="slide-share" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ssv" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="commons" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -536,6 +584,9 @@
     <property name="dynamic.classpath" value="false" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="cn.orz.pascal.ssv.commons" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="cn.orz.pascal.ssv.model" />
     </key>
@@ -814,28 +865,28 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-4" y="49" width="1928" height="1035" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32995495" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977587" sideWeight="0.670045" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32995495" sideWeight="0.49786553" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39977476" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32995495" sideWeight="0.52187836" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32995495" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32995495" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32995495" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32995495" sideWeight="0.47865528" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32995495" sideWeight="0.47438633" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32995495" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24919957" sideWeight="0.670045" order="1" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32995495" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32995495" sideWeight="0.46798292" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
     </layout>
@@ -899,122 +950,136 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/test/java/cn/orz/pascal/ssv/model/BMITest.java">
+    <entry file="jar:///opt/android-sdk-linux_x86/android-sdk_r20.0.1-linux_x86/platforms/android-10/android.jar!/java/lang/Thread.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="13" selection-start="117" selection-end="117" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/orz/pascal/ssv/model/BMI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="19" selection-start="118" selection-end="118" vertical-scroll-proportion="0.18453427">
+        <state line="52" column="41" selection-start="2184" selection-end="2184" vertical-scroll-proportion="0.33271027">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/orz/pascal/ssv/MainApplication.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/orz/pascal/ssv/model/BMISocialService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="7" selection-start="268" selection-end="268" vertical-scroll-proportion="0.3427065">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/google/android/android/2.3.3/android-2.3.3-sources.jar!/android/content/DialogInterface.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="72" selection-start="293" selection-end="293" vertical-scroll-proportion="0.13005273">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/orz/pascal/ssv/commons/AndroidUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="17" selection-start="355" selection-end="355" vertical-scroll-proportion="0.42179263">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/gueei/android-binding/v30-0.52/android-binding-v30-0.52.jar!/gueei/binding/Binder.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="58" column="0" selection-start="2868" selection-end="2868" vertical-scroll-proportion="-17.8">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/orz/pascal/ssv/commons/XmlUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="33" selection-start="791" selection-end="799" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/main.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="30" selection-start="892" selection-end="892" vertical-scroll-proportion="0.0">
+        <state line="15" column="27" selection-start="271" selection-end="287" vertical-scroll-proportion="0.3558394">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/orz/pascal/ssv/injector/TwitterInjector.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="61" column="0" selection-start="1910" selection-end="2612" vertical-scroll-proportion="1.259124">
+        <state line="73" column="32" selection-start="2550" selection-end="2613" vertical-scroll-proportion="0.68365556">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/google/android/android/2.3.3/android-2.3.3-sources.jar!/android/util/Log.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="27" selection-start="566" selection-end="672" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/orz/pascal/ssv/MainApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="13" selection-start="154" selection-end="154" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="35" selection-start="1808" selection-end="1819" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/orz/pascal/ssv/viewmodel/SlideViewModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="48" selection-start="280" selection-end="280" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#2065#2646#0" expanded="true" />
-            <element signature="e#2639#2640#0" expanded="true" />
-            <element signature="e#2681#3231#0" expanded="true" />
-            <element signature="e#3224#3225#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/orz/pascal/ssv/model/BMISocialService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="37" selection-start="330" selection-end="330" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/orz/pascal/ssv/viewmodel/SlideActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="20" selection-start="396" selection-end="396" vertical-scroll-proportion="0.0">
+        <state line="49" column="24" selection-start="1857" selection-end="1857" vertical-scroll-proportion="-0.7116788">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/orz/pascal/ssv/model/RemoteSlide.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="61" column="0" selection-start="2018" selection-end="2018" vertical-scroll-proportion="0.0">
+        <state line="84" column="28" selection-start="2845" selection-end="2845" vertical-scroll-proportion="0.0">
           <folding>
-            <element signature="e#986#994#0" expanded="true" />
-            <element signature="e#1824#1832#0" expanded="true" />
+            <element signature="e#993#1001#0" expanded="true" />
+            <element signature="e#1801#1809#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/orz/pascal/ssv/commons/AndroidUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="13" selection-start="323" selection-end="323" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/orz/pascal/ssv/commons/XmlUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="0" selection-start="1096" selection-end="1096" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/cn/orz/pascal/ssv/model/RemoteSlideTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="30" selection-start="331" selection-end="352" vertical-scroll-proportion="0.3954306">
+        <state line="8" column="24" selection-start="319" selection-end="319" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#712#888#0" expanded="true" />
+            <element signature="e#877#878#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/orz/pascal/ssv/viewmodel/SlideViewModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="67" column="7" selection-start="1979" selection-end="1979" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1354#1935#0" expanded="true" />
+            <element signature="e#1928#1929#0" expanded="true" />
+            <element signature="e#2012#2562#0" expanded="true" />
+            <element signature="e#2555#2556#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/orz/pascal/ssv/viewmodel/SlideActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="43" selection-start="940" selection-end="940" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#1017#1192#0" expanded="true" />
+            <element signature="e#1181#1182#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/orz/pascal/ssv/commons/Logger.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="34" column="7" selection-start="966" selection-end="966" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#367#381#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/orz/pascal/ssv/commons/LogSource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="0" selection-start="348" selection-end="348" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/orz/pascal/ssv/commons/AndroidLogSource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="5" selection-start="513" selection-end="513" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/orz/pascal/ssv/commons/StandardLogSource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="0" selection-start="35" selection-end="35" vertical-scroll-proportion="0.027372263">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

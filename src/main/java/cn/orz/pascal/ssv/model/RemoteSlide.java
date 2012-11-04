@@ -1,7 +1,7 @@
 package cn.orz.pascal.ssv.model;
 
-import android.util.Log;
-import cn.orz.pascal.ssv.commons.XmlUtil;
+import cn.orz.pascal.ssv.commons.Logger;
+import com.google.inject.Inject;
 import org.ccil.cowan.tagsoup.Parser;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -33,16 +33,20 @@ import java.util.List;
 public class RemoteSlide {
     private List<String> urls = new ArrayList<String>();
 
+    @Inject
+    private Logger logger;
+
     public void load(URL url) throws IOException, SAXNotRecognizedException, SAXNotSupportedException, TransformerException, JSONException {
-        long start = System.currentTimeMillis();
+        double logId = this.logger.startTrace();
+
         JSONObject json = this.getJson(this.getDocument(url));
 
         String baseUrl = json.getJSONObject("slideshow").getString("pin_image_url");
         int totalSlidesCount = json.getInt("totalSlides");
 
         this.urls = this.generateSlideUrl(baseUrl, totalSlidesCount);
-        long end = System.currentTimeMillis();
-        Log.d("trace", "load(), time=" + (end - start) + "ms");
+
+        this.logger.printTrace(logId);
     }
 
     public List<String> getUrls() {
@@ -61,15 +65,14 @@ public class RemoteSlide {
     }
 
     JSONObject getJson(Document doc) throws IOException, SAXNotRecognizedException, SAXNotSupportedException, TransformerException, JSONException {
-        long start = System.currentTimeMillis();
+        double logId = this.logger.startTrace();
 
         String pageJsonText = doc.getElementById("page-json").getFirstChild().getNodeValue();
         String json = getJsonString(pageJsonText);
+        JSONObject result = new JSONObject(json);
 
-        long end = System.currentTimeMillis();
-        Log.d("trace", "getJson(), time=" + (end - start) + "ms");
-
-        return new JSONObject(json);
+        this.logger.printTrace(logId);
+        return result;
     }
 
     String getJsonString(String pageJsonText) {
@@ -79,7 +82,7 @@ public class RemoteSlide {
     }
 
     Document getDocument(URL url) throws IOException, SAXNotRecognizedException, SAXNotSupportedException, TransformerException {
-        long start = System.currentTimeMillis();
+        double logId = this.logger.startTrace();
 
         URLConnection uc = url.openConnection();
         uc.setDoOutput(true);//POST可能にする
@@ -98,10 +101,9 @@ public class RemoteSlide {
 
         DOMResult result = new DOMResult();
         transformer.transform(new SAXSource(reader, source), result);
+        Document doc = (Document) result.getNode();
 
-        long end = System.currentTimeMillis();
-
-        Log.d("trace", "getDocument(), time=" + (end - start) + "ms");
-        return (Document) result.getNode();
+        this.logger.printTrace(logId);
+        return doc;
     }
 }

@@ -4,10 +4,20 @@ import android.os.Bundle;
 import android.util.Log;
 import android.widget.ImageView;
 import cn.orz.pascal.ssv.R;
+import cn.orz.pascal.ssv.commons.AndroidLogSource;
 import cn.orz.pascal.ssv.commons.AndroidUtils;
+import cn.orz.pascal.ssv.commons.LogSource;
+import com.google.inject.AbstractModule;
+import com.google.inject.Guice;
+import com.google.inject.Injector;
 import gueei.binding.app.BindingActivity;
+import org.json.JSONException;
+import org.xml.sax.SAXNotRecognizedException;
+import org.xml.sax.SAXNotSupportedException;
 
+import javax.xml.transform.TransformerException;
 import java.io.IOException;
+import java.net.URL;
 
 /**
  * Top Activity.
@@ -21,17 +31,30 @@ public class SlideActivity extends BindingActivity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         // model binding.
-        SlideViewModel model = new SlideViewModel();
+        Injector injector = Guice.createInjector(new AbstractModule() {
+            @Override
+            protected void configure() {
+                bind(LogSource.class).to(AndroidLogSource.class);
+            }
+        });
+
+        SlideViewModel model = injector.getInstance(SlideViewModel.class);
         setAndBindRootView(R.layout.main, model);
 
-        ImageView image = (ImageView) findViewById(R.id.imageView);
-        String url = "http://image.slidesharecdn.com/tokyuruby05-120729164050-phpapp01/95/slide-1-1024.jpg";
-        //画像をリソースを設定
         try {
-            image.setImageBitmap(AndroidUtils.getBitmap(url));
+            model.init("http://www.slideshare.net/koduki/tokyu-ruby05");
         } catch (IOException e) {
-            Log.v("error", "load image error", e);
+            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+        } catch (SAXNotRecognizedException e) {
+            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+        } catch (SAXNotSupportedException e) {
+            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+        } catch (TransformerException e) {
+            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+        } catch (JSONException e) {
+            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
         }
 
     }
