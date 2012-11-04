@@ -31,13 +31,22 @@ import java.util.List;
  * To change this template use File | Settings | File Templates.
  */
 public class RemoteSlide {
-    public List<String> getUrls(URL url) throws IOException, SAXNotRecognizedException, SAXNotSupportedException, TransformerException, JSONException {
+    private List<String> urls = new ArrayList<String>();
+
+    public void load(URL url) throws IOException, SAXNotRecognizedException, SAXNotSupportedException, TransformerException, JSONException {
+        long start = System.currentTimeMillis();
         JSONObject json = this.getJson(this.getDocument(url));
 
         String baseUrl = json.getJSONObject("slideshow").getString("pin_image_url");
         int totalSlidesCount = json.getInt("totalSlides");
 
-        return this.generateSlideUrl(baseUrl, totalSlidesCount);
+        this.urls = this.generateSlideUrl(baseUrl, totalSlidesCount);
+        long end = System.currentTimeMillis();
+        Log.d("trace", "load(), time=" + (end - start) + "ms");
+    }
+
+    public List<String> getUrls() {
+        return this.urls;
     }
 
     List<String> generateSlideUrl(String baseUrl, int totalSlidesCount) {
@@ -52,10 +61,13 @@ public class RemoteSlide {
     }
 
     JSONObject getJson(Document doc) throws IOException, SAXNotRecognizedException, SAXNotSupportedException, TransformerException, JSONException {
+        long start = System.currentTimeMillis();
+
         String pageJsonText = doc.getElementById("page-json").getFirstChild().getNodeValue();
         String json = getJsonString(pageJsonText);
 
-        System.out.println(json);
+        long end = System.currentTimeMillis();
+        Log.d("trace", "getJson(), time=" + (end - start) + "ms");
 
         return new JSONObject(json);
     }
@@ -67,6 +79,8 @@ public class RemoteSlide {
     }
 
     Document getDocument(URL url) throws IOException, SAXNotRecognizedException, SAXNotSupportedException, TransformerException {
+        long start = System.currentTimeMillis();
+
         URLConnection uc = url.openConnection();
         uc.setDoOutput(true);//POST可能にする
 
@@ -85,6 +99,9 @@ public class RemoteSlide {
         DOMResult result = new DOMResult();
         transformer.transform(new SAXSource(reader, source), result);
 
+        long end = System.currentTimeMillis();
+
+        Log.d("trace", "getDocument(), time=" + (end - start) + "ms");
         return (Document) result.getNode();
     }
 }

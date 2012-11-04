@@ -1,30 +1,25 @@
 package cn.orz.pascal.ssv.viewmodel;
 
 import android.util.Log;
-import android.widget.ImageView;
-import cn.orz.pascal.ssv.R;
+import android.view.View;
 import cn.orz.pascal.ssv.commons.AndroidUtils;
-import cn.orz.pascal.ssv.config.Config;
 import cn.orz.pascal.ssv.config.Environment;
 import cn.orz.pascal.ssv.injector.TwitterInjector;
-import cn.orz.pascal.ssv.model.BMI;
 import cn.orz.pascal.ssv.model.BMISocialService;
-
 import cn.orz.pascal.ssv.model.RemoteSlide;
-import com.google.inject.AbstractModule;
 import com.google.inject.Guice;
 import com.google.inject.Injector;
 import gueei.binding.Command;
-import gueei.binding.bindingProviders.ImageViewProvider;
-import gueei.binding.observables.DoubleObservable;
+import gueei.binding.observables.IntegerObservable;
 import gueei.binding.observables.ObjectObservable;
-import gueei.binding.observables.StringObservable;
-import android.view.View;
-import twitter4j.TwitterFactory;
-import twitter4j.conf.ConfigurationBuilder;
+import org.json.JSONException;
+import org.xml.sax.SAXNotRecognizedException;
+import org.xml.sax.SAXNotSupportedException;
 
+import javax.xml.transform.TransformerException;
 import java.io.IOException;
 import java.net.URL;
+import java.util.List;
 
 /**
  * BMI Activity View Model.
@@ -36,44 +31,62 @@ public class SlideViewModel {
      *
      */
     public final ObjectObservable slideImage = new ObjectObservable();
-    /**
-     * body height.
-     */
-    public final StringObservable height = new StringObservable();
-    /**
-     * body weight.
-     */
-    public final StringObservable weight = new StringObservable();
-    /**
-     * BMI value.
-     */
-    public final StringObservable bmi = new StringObservable("0");
+    public final IntegerObservable currentIndex = new IntegerObservable(1);
+
+    private final RemoteSlide remoteSlide = new RemoteSlide();
+
+    public SlideViewModel() {
+        try {
+            this.remoteSlide.load(new URL("http://www.slideshare.net/koduki/tokyu-ruby05"));
+        } catch (IOException e) {
+            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+        } catch (SAXNotRecognizedException e) {
+            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+        } catch (SAXNotSupportedException e) {
+            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+        } catch (TransformerException e) {
+            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+        } catch (JSONException e) {
+            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+        }
+    }
 
 
     /**
      * calculate BMI.
      */
     public final Command next = new Command() {
-        private int currentIndex = 1;
-
         @Override
         public void Invoke(View arg0, Object... arg1) {
-            //画像をリソースを設定
-            try{
-                this.currentIndex += 1;
-                Log.i("debug", "onNext " + this.currentIndex);
+            try {
+                if (currentIndex.get() < remoteSlide.getUrls().size() - 1) {
+                    currentIndex.set(currentIndex.get() + 1);
+                    Log.i("debug", "onNext " + currentIndex.get());
 
-                String url = new RemoteSlide().getUrls(new URL("http://www.slideshare.net/koduki/tokyu-ruby05")).get(this.currentIndex);
-
-                slideImage.set(AndroidUtils.getBitmap(url));
-            }catch (Exception e){
+                    String url = remoteSlide.getUrls().get(currentIndex.get());
+                    slideImage.set(AndroidUtils.getBitmap(url));
+                }
+            } catch (Exception e) {
                 e.printStackTrace();
             }
         }
     };
 
-    private BMISocialService createBmiSocialService() {
-        Injector injector = Guice.createInjector(new TwitterInjector(Environment.getInstance().getProfile()));
-        return injector.getInstance(BMISocialService.class);
-    }
+    public final Command prev = new Command() {
+        @Override
+        public void Invoke(View arg0, Object... arg1) {
+            try {
+                if (currentIndex.get() > 0) {
+                    currentIndex.set(currentIndex.get() - 1);
+                    Log.i("debug", "onNext " + currentIndex.get());
+
+                    String url = remoteSlide.getUrls().get(currentIndex.get());
+                    slideImage.set(AndroidUtils.getBitmap(url));
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+    };
+
 }

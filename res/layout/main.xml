@@ -16,6 +16,12 @@
             android:layout_height="wrap_content"
             android:text="Next"
             binding:onClick="next"/>
+    <Button
+            android:contentDescription="@string/tweet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Prev"
+            binding:onClick="prev"/>
     <ImageView
             android:id="@+id/imageView"
             android:layout_width="match_parent"
