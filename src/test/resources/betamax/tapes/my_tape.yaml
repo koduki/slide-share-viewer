@@ -19,7 +19,7 @@ interactions:
       Expires: '-1'
       P3P: CP="This is not a P3P policy! See http://www.google.com/support/accounts/bin/answer.py?hl=en&answer=151657 for more info."
       Server: gws
-      Set-Cookie: PREF=ID=fa5743e33aa1e0a8:FF=0:TM=1353886195:LM=1353886195:S=my_Hw0OYJp3nuD-z; expires=Tue, 25-Nov-2014 23:29:55 GMT; path=/; domain=.google.co.jp, NID=66=IijFeNtgPs0FQFBqIU7fwPxJB7ZFoUeRf5hdMExgaARPsU9M_VAzIXEwJyjr44MYEJzVZbZQ1G1Vyx6d_WjqlYJ6TImA1uxuTLz8CgKztwizzjjChom9d-_9Qr-LfMdg; expires=Mon, 27-May-2013 23:29:55 GMT; path=/; domain=.google.co.jp; HttpOnly
+      Set-Cookie: PREF=ID=fa5743e33aa1e0a8:FF=0:TM=1353886195:LM=1353886195:S=my_Hw0OYJp3nuD-z; expires=Tue, 25-Nov-2014 23:29:55 GMT; path=/; domain=.google.co.jp, NID=66=IijFeNtgPs0FQFBqIU7fwPxJB7ZFoUeRf5hdMExgaARPsU9M_VAzI1EwJyjr44MYEJzVZbZQ1G1Vyx6d_WjqlYJ6TImA1uxuTLz8CgKztwizzjjChom9d-_9Qr-LfMag; expires=Mon, 27-May-2013 23:29:55 GMT; path=/; domain=.google.co.jp; HttpOnly
       X-Frame-Options: SAMEORIGIN
       X-XSS-Protection: 1; mode=block
     body: |-
