@@ -54,6 +54,8 @@ public class RemoteSlide {
     }
 
     List<String> generateSlideUrl(String baseUrl, int totalSlidesCount) {
+        double logId = this.logger.startTrace();
+
         String[] base = baseUrl.split("95/slide-1");
 
         List<String> list = new ArrayList<String>(totalSlidesCount);
@@ -61,10 +63,11 @@ public class RemoteSlide {
             list.add("http:" + base[0] + "95/slide-" + (i + 1) + base[1]);
         }
 
+        this.logger.printTrace(logId);
         return list;
     }
 
-    JSONObject getJson(Document doc) throws IOException, SAXNotRecognizedException, SAXNotSupportedException, TransformerException, JSONException {
+    private JSONObject getJson(Document doc) throws IOException, SAXNotRecognizedException, SAXNotSupportedException, TransformerException, JSONException {
         double logId = this.logger.startTrace();
 
         String pageJsonText = doc.getElementById("page-json").getFirstChild().getNodeValue();
@@ -75,13 +78,18 @@ public class RemoteSlide {
         return result;
     }
 
-    String getJsonString(String pageJsonText) {
-        return pageJsonText
+    private String getJsonString(String pageJsonText) {
+        double logId = this.logger.startTrace();
+
+        String result = pageJsonText
                 .replaceAll("\r", "").replaceAll("\n", "")
                 .replaceAll(".*slideshare_object = ", "").replaceAll("; var .*", "");
+
+        this.logger.printTrace(logId);
+        return result;
     }
 
-    Document getDocument(URL url) throws IOException, SAXNotRecognizedException, SAXNotSupportedException, TransformerException {
+    private Document getDocument(URL url) throws IOException, SAXNotRecognizedException, SAXNotSupportedException, TransformerException {
         double logId = this.logger.startTrace();
 
         URLConnection uc = url.openConnection();

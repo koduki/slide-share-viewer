@@ -2,13 +2,14 @@ package cn.orz.pascal.ssv.model;
 
 import cn.orz.pascal.ssv.commons.LogSource;
 import cn.orz.pascal.ssv.commons.StandardLogSource;
+import co.freeside.betamax.Betamax;
+import co.freeside.betamax.Recorder;
 import com.google.inject.AbstractModule;
 import com.google.inject.Guice;
 import com.google.inject.Injector;
-import com.xtremelabs.robolectric.RobolectricTestRunner;
 import org.junit.Before;
+import org.junit.Rule;
 import org.junit.Test;
-import org.junit.runner.RunWith;
 
 import java.net.URL;
 import java.util.Arrays;
@@ -17,8 +18,10 @@ import java.util.List;
 import static junit.framework.Assert.assertEquals;
 
 
-@RunWith(RobolectricTestRunner.class)
 public class RemoteSlideTest {
+    @Rule
+    public Recorder recorder = new Recorder();
+
     private RemoteSlide remoteSlide;
 
     @Before
@@ -32,6 +35,7 @@ public class RemoteSlideTest {
         this.remoteSlide = injector.getInstance(RemoteSlide.class);
     }
 
+    @Betamax(tape = "remote_slide01")
     @Test
     public void testGetUrls1() throws Exception {
         List<String> expected = Arrays.asList(
